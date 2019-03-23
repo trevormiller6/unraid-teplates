@@ -63,6 +63,11 @@
       <Mode/>
     </Variable>
     <Variable>
+      <Value>SMTP</Value>
+      <Name>mail__transport</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value></Value>
       <Name>mail__options__host</Name>
       <Mode/>
@@ -103,10 +108,11 @@
     <Config Name="Database Name" Target="database__connection__database" Default="ghost" Mode="" Description="The name of the database to create" Type="Variable" Display="always" Required="true" Mask="false">ghost</Config>
     <Config Name="URL" Target="url" Default="" Mode="" Description="Site URL" Type="Variable" Display="always" Required="false" Mask="false"></Config>
     <Config Name="Mail Transport" Target="mail__transport" Default="" Mode="" Description="Mail transport method" Type="Variable" Display="always" Required="false" Mask="false">SMTP</Config>
-    <Config Name="Mail Host" Target="mail__options__host" Default="" Mode="" Description="Mail service" Type="Variable" Display="always" Required="false" Mask="false">ip or hostname</Config>
-    <Config Name="Mail Port" Target="mail__options__port" Default="25" Mode="" Description="Mail service" Type="Variable" Display="always" Required="false" Mask="false">25</Config>
-    <Config Name="Mailgun Username" Target="mail__options__auth__user" Default="" Mode="" Description="Username for Mailgun" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-    <Config Name="Mailgun Password" Target="mail__options__auth__pass" Default="" Mode="" Description="Password for Mailgun" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+    <Config Name="Mail Transport" Target="mail__transport" Default="" Mode="" Description="email from" Type="Variable" Display="always" Required="false" Mask="false">ghost@example.com</Config>
+    <Config Name="Mail Host" Target="mail__options__host" Default="" Mode="" Description="Mail server host/ip" Type="Variable" Display="always" Required="false" Mask="false">ip/hostname</Config>
+    <Config Name="Mail Port" Target="mail__options__port" Default="25" Mode="" Description="Mail port" Type="Variable" Display="always" Required="false" Mask="false">25</Config>
+    <Config Name="Mailgun Username" Target="mail__options__auth__user" Default="" Mode="" Description="Username for SMTP" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+    <Config Name="Mailgun Password" Target="mail__options__auth__pass" Default="" Mode="" Description="Password for SMTP" Type="Variable" Display="always" Required="false" Mask="false"></Config>
     <Config Name="Database Type" Target="database__client" Default="" Mode="" Description="Database Type: Leave as mysql" Type="Variable" Display="advanced" Required="true" Mask="false">mysql</Config>
     <Config Name="Appdata Location" Target="/var/lib/ghost/content" Default="/mnt/user/appdata/ghost" Mode="rw" Description="Container Path: /var/lib/ghost" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/ghost</Config>
     <Config Name="Web" Target="2368" Default="2368" Mode="tcp" Description="Web port for Ghost" Type="Port" Display="advanced" Required="true" Mask="false">2368</Config>
