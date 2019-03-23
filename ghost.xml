@@ -63,8 +63,13 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>Mailgun</Value>
-      <Name>mail__options__service</Name>
+      <Value></Value>
+      <Name>mail__options__host</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>25</Value>
+      <Name>mail__options__port</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -99,7 +104,7 @@
     <Config Name="URL" Target="url" Default="" Mode="" Description="Site URL" Type="Variable" Display="always" Required="false" Mask="false"></Config>
     <Config Name="Mail Transport" Target="mail__transport" Default="" Mode="" Description="Mail transport method" Type="Variable" Display="always" Required="false" Mask="false">SMTP</Config>
     <Config Name="Mail Host" Target="mail__options__host" Default="" Mode="" Description="Mail service" Type="Variable" Display="always" Required="false" Mask="false">ip or hostname</Config>
-    <Config Name="Mail Port" Target="mail__options__port" Default="25" Mode="" Description="Mail service" Type="Variable" Display="always" Required="false" Mask="false">Port</Config>
+    <Config Name="Mail Port" Target="mail__options__port" Default="25" Mode="" Description="Mail service" Type="Variable" Display="always" Required="false" Mask="false">25</Config>
     <Config Name="Mailgun Username" Target="mail__options__auth__user" Default="" Mode="" Description="Username for Mailgun" Type="Variable" Display="always" Required="false" Mask="false"></Config>
     <Config Name="Mailgun Password" Target="mail__options__auth__pass" Default="" Mode="" Description="Password for Mailgun" Type="Variable" Display="always" Required="false" Mask="false"></Config>
     <Config Name="Database Type" Target="database__client" Default="" Mode="" Description="Database Type: Leave as mysql" Type="Variable" Display="advanced" Required="true" Mask="false">mysql</Config>
